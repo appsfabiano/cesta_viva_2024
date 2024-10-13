@@ -1,0 +1,73 @@
+.CEContainer{
+    margin-bottom: 60px;
+}
+
+.CEForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "cnpj cnpj cnpj cnpj"
+        "razaoSocial razaoSocial razaoSocial razaoSocial"
+        "nomeFantasia nomeFantasia nomeFantasia nomeFantasia"
+        "enderecoRua enderecoRua enderecoRua enderecoNum"
+        "enderecoComp enderecoComp enderecoBairro enderecoBairro"
+        "enderecoCidade enderecoCidade enderecoEstado enderecoCep"
+        "email email email email"
+        "responsavel responsavel telefone telefone"
+        "senha senha confirmeSenha confirmeSenha"
+        "termo termo termo termo"
+        "button button button button";
+}
+
+input[name="CNPJ"] { grid-area: cnpj; }
+
+input[name="RazaoSocial"] { grid-area: razaoSocial; }
+
+input[name="NomeFantasia"] { grid-area: nomeFantasia; }
+
+input[name="EnderecoRua"] { grid-area: enderecoRua; }
+
+input[name="EnderecoNum"] { grid-area: enderecoNum; }
+
+input[name="EnderecoComp"] { grid-area: enderecoComp; }
+
+input[name="EnderecoBairro"] { grid-area: enderecoBairro; }
+
+input[name="EnderecoCidade"] { grid-area: enderecoCidade; }
+
+input[name="EnderecoEstado"] { grid-area: enderecoEstado; }
+
+input[name="EnderecoCep"] { grid-area: enderecoCep; }
+
+input[name="Responsavel"] { grid-area: responsavel; }
+
+input[name="Telefone"] { grid-area: telefone; }
+
+input[name="Email"] { grid-area: email; }
+
+input[name="Senha"] { grid-area: senha; }
+
+input[name="ConfirmeSenha"] { grid-area: confirmeSenha; }
+
+div[name="termo"] { grid-area: termo; }
+
+button[name="CEbutton"] { grid-area: button; }
+
+
+.errorMessage {
+    color: red;
+    grid-column: 1 / -1; /* Para que ocupe a largura total do formulário */
+    text-align: center;
+}
+
+.termo-checkbox{
+    display: flex;
+    font-size: 0.7rem;
+}
+
+.termo-checkbox input{
+    width: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

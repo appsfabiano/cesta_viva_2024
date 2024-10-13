@@ -1,0 +1,31 @@
+Estrutura do Backend:
+
+cestaviva-backend
+> node_modules
+> src
+| > config
+| | > dbConnect.js
+| > controllers
+| | > cestasController.js
+| | > entidadeController.js
+| | > produtoController.js
+| | > userController.js
+| > middlewares
+| | > authToken.js
+| > models
+| | > entidade.js
+| | > modeloCesta.js
+| | > modeloProduto.js
+| | > User.js
+| > routes
+| | > authRoutes.js
+| | > cestasRoutes.js
+| | > entidadeRoutes.js
+| | > index.js
+| | > produtoRoutes.js
+| > app.js
+> .env
+> .gitignore
+> package-lock.json
+> package.json
+> server.js

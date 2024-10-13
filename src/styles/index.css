@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --bg-principal: #EBF0FA;
+    --bg-secundario: #dbc08e;
+    --bg-terciario: #b0722b;
+    --bg-hover: #6b501c;
+    --bg-form: #f8f3eb;
+}
+
+/* Configuração geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--bg-principal);
+}
+
+h1, 
+h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--bg-hover);
+}
+
+h3{
+    color: var(--bg-hover);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Barra de Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    background-color: var(--bg-secundario);
+    justify-content: space-evenly;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--bg-hover);
+    padding: 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: var(--bg-terciario);
+    color: white;
+}
+
+
+/* Forms, Botões e Inputs */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-form);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+.BELi,
+textarea,
+input{
+    width: 100%;
+    padding: 5px;
+    padding-left: 2rem;
+    border: 1px solid var(--bg-terciario);
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: left;
+    /* box-sizing: border-box; */
+    box-shadow: 
+        0 4px 8px rgba(199, 199, 199, 0.1), 
+        0 6px 20px rgba(199, 199, 199, 0.1);
+}
+
+.BELi,
+textarea:focus,
+input:focus{
+    border-color: var(--bg-hover);
+    outline: none;
+    box-shadow: 0 0 5px rgba(58, 119, 255, 0.3);
+}
+
+button {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: var(--bg-terciario);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--bg-hover);
+}
+
+.ButtonTotal{
+    width: 100%;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--bg-secundario);
+    color: var(--bg-hover);
+    text-align: center;
+    width: 100%;
+    padding: .5rem;
+    position: fixed;
+    bottom: 0;
+}

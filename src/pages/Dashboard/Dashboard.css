@@ -1,0 +1,400 @@
+.dashboard-container,
+.dashboard-content {
+    display: flex;
+}
+
+.dashboard-content {    
+    flex-direction: column;
+    flex: 1;        /* Ocupa todo o espaço restante */
+    overflow: auto; /* Permite rolagem se o conteúdo for maior que a tela */
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: var(--bg-principal);
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background-color: var(--bg-terciario);
+}
+
+.sidebar:hover {
+    width: 240px;
+    transition: 0.5s;
+}
+
+.menu {
+    margin-top: 90px;
+    height: 88%;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.menu li.active {
+    background-color: var(--bg-secundario);
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    color: var(--bg-principal);
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.menu a:hover {
+    color: var(--bg-hover);
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a .fas {
+    font-size: 1.1rem;
+}
+
+
+/* Header section */
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0 2rem;
+    height: 50px;
+    margin: 1rem;
+    margin-right: 1rem;
+}
+
+.header--title {
+    color: var(--bg-hover);
+    text-align: left;
+}
+
+/* Dashboard Cards */
+.card--container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.lastOne{
+    margin-bottom: 4rem;
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.main--title {
+    color: var(--bg-hover);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.dashboard--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 260px;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.dashboard--card:hover {
+    transform: translateY(-5px);
+}
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.fas-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: lightgrey;
+}
+
+/* Cores dos cartões */
+.light-red {
+    background-color: rgb(247, 177, 177);
+}
+
+.light-purple {
+    background-color: rgb(221, 177, 221);
+}
+
+.light-green {
+    background-color: lightgreen;
+}
+
+.light-blue {
+    background-color: lightblue;
+}
+
+.dark-red {
+    background-color: red;
+}
+
+.dark-purple {
+    background-color: purple;
+}
+
+.dark-green {
+    background-color: green;
+}
+
+.dark-blue {
+    background-color: blue;
+}
+
+
+/* Dashboard Section Table */
+.table--container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--bg-principal);
+    color: var(--bg-hover);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+th, 
+td {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody {
+    background-color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #e0f7fa; /* Efeito hover para realçar a linha */
+    cursor: pointer;
+}
+
+td {
+    padding: 0.3rem 0;
+    font-size: 0.9rem;
+    color: var(--bg-terciario);
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-principal);
+}
+
+.iconEditTrash {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 30px;
+    gap: 10px;
+}
+
+tfoot {
+    background-color: var(--bg-secundario);
+    font-weight: bold;
+    color: red;
+}
+
+tfoot td {
+    padding: 1rem;
+}
+
+/* Dashboard User */
+.user--container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.user--container img {
+    height: 300px;
+    width: 300px;
+    margin-right: 2rem;
+    border: 1px solid var(--bg-secundario);
+}
+
+.user--container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.user--container div textarea {
+    margin-bottom: 2rem;
+}
+
+.user--container h3{
+    margin-top: 2rem;
+}
+
+.card--content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.UserP {
+    font-size: 1rem;
+    text-align: left;
+    padding: 2px;
+    padding-left: 1rem;
+    width: 100%;
+    border: 1px solid var(--bg-terciario);
+    border-radius: 10px;
+    box-shadow:
+        0 4px 8px rgba(199, 199, 199, 0.1),
+        0 6px 20px rgba(199, 199, 199, 0.1);
+    background-color: var(--bg-principal);
+}
+
+.UserLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.dashboard--FAQ-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--bg-secundario);
+    transition: all 0.5s ease-in-out;
+    background-color: #eee;
+    margin-bottom: 1rem;
+}
+
+.dashboard--FAQ-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Dashboard Cestas */
+.cestas-flex{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cestas--cadastroProduto{
+    width: 35%;
+}
+
+.form-container{
+    width: 100%;
+}
+
+.lista-produtos{
+    width: 65%;
+    padding: 20px;
+    background: var(--bg-principal);
+}
+
+.lista-produtos table{
+    font-size: 0.8rem;
+}
+
+.btnQtd{
+    width: 100px;
+    padding: 2px;
+    font-size: 0.8rem;
+}
+.btnQtd.left{
+    margin-left: 1rem;
+}
+
+.inputQtd{
+    padding-left: 1rem;
+    margin-right: 10px;
+}
+
+
+/* Suporte */
+
+.form--span{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.form--span button{
+    min-width: 220px;
+    width: 45%;
+}
+
+.form--span select{
+    flex: 1;
+}
+
+.form--support div{
+    width: 100%;
+}
+
+
+/* FAQ */
+.perguntas{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marginBotton{
+    margin-bottom: 0;
+}
